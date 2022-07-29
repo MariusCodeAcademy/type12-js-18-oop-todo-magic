@@ -17,9 +17,15 @@ export default class UI {
    */
   static createLi(todo) {
     const liEl = document.createElement('li');
-    liEl.textContent = `${todo.title} created at ${todo.timeStamp}`;
+    // pridedam <li data-id=5 >
+    liEl.dataset.id = todo.id;
+    liEl.textContent = `${todo.title} created at ${todo.timeStamp} `;
+    const buttonEl = document.createElement('button');
+    buttonEl.textContent = 'delete';
+    liEl.append(buttonEl);
     return liEl;
   }
+
   /**
    *
    * @param {Todo[]} todoArr
