@@ -23,7 +23,12 @@ export default class UI {
     liEl.className = todo.complete ? 'done-todo' : '';
     liEl.textContent = `${todo.title} created at ${todo.timeStamp} `;
     const buttonEl = document.createElement('button');
-    buttonEl.textContent = 'delete';
+    buttonEl.innerHTML = '<i class="fa fa-trash" aria-hidden="true"></i>';
+    liEl.insertAdjacentHTML(
+      'afterbegin',
+      `<i class="fa fa-${todo.complete ? 'check-circle' : 'circle-thin'}" aria-hidden="true"></i> `
+    );
+
     liEl.append(buttonEl);
     return liEl;
   }

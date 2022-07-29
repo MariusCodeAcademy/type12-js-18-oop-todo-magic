@@ -7,3 +7,7 @@
 .done-todo::after {
   content: ' complete';
 }
+
+.list {
+  list-style: none;
+}

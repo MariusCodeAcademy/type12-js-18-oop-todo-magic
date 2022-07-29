@@ -7,6 +7,7 @@ import UI from './class/UI.js';
 console.log('main.js');
 
 const app = new App();
+const t1 = new Todo('Buy milk');
 
 app.addTodo(new Todo('Buy milk'));
 app.addTodo(new Todo('Read a book'));

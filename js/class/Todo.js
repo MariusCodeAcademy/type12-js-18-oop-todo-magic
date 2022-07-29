@@ -9,7 +9,8 @@ export default class Todo {
     this.timeStamp = new Date().toLocaleTimeString();
   }
 
-  markDone() {
+  toggleComplete() {
     this.complete = !this.complete;
+    this.timeStamp = new Date().toLocaleTimeString();
   }
 }

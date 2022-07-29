@@ -19,11 +19,11 @@ export default class App {
   }
 
   toggleDone(idToToggle) {
-    // surasti el, kurio id === idToggle ir jam iskviesti markDone()
+    // surasti el, kurio id === idToggle ir jam iskviesti toggleComplete()
     console.log('idToToggle ===', idToToggle);
     const found = this.todoArr.find((todo) => todo.id === idToToggle);
     if (!found) console.log('neradom');
-    found.markDone();
+    found.toggleComplete();
     this.renderTodos();
   }
 
