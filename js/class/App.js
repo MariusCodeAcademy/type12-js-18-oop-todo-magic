@@ -1,7 +1,10 @@
-class App {
+export default class App {
   constructor() {
     this.todoArr = [];
   }
 
-  addTodo() {}
+  addTodo(todo) {
+    this.todoArr.push(todo);
+    console.log('this.todoArr ===', this.todoArr);
+  }
 }
