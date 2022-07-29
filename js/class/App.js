@@ -11,6 +11,13 @@ export default class App {
     this.renderTodos();
   }
 
+  removeTodo(idTodDelete) {
+    const todoArrAfterDelete = this.todoArr.filter((todo) => todo.id !== idTodDelete);
+    this.todoArr = todoArrAfterDelete;
+    console.log('this.todoArr after delete ===', this.todoArr);
+    this.renderTodos();
+  }
+
   renderTodos() {
     UI.appendTodoList(this.todoArr);
   }

@@ -1,4 +1,5 @@
 import Todo from './Todo.js';
+import App from './App.js';
 
 export default class UI {
   static inputEl = document.getElementById('new-todo');
@@ -24,6 +25,16 @@ export default class UI {
     buttonEl.textContent = 'delete';
     liEl.append(buttonEl);
     return liEl;
+  }
+
+  /**
+   *
+   * @param {App} app
+   * @param {string} id
+   */
+  static delete(app, id) {
+    console.log('id ===', id);
+    app.removeTodo(id);
   }
 
   /**

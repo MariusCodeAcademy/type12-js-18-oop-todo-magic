@@ -12,3 +12,12 @@ const app = new App();
 UI.addTodoBtnEl.addEventListener('click', () => {
   UI.makeNewTodo(app);
 });
+
+UI.mainListEl.addEventListener('click', (event) => {
+  const elWePressedOn = event.target;
+
+  if (elWePressedOn.tagName === 'BUTTON') {
+    const liId = elWePressedOn.parentElement.dataset.id;
+    UI.delete(app, liId);
+  }
+});
