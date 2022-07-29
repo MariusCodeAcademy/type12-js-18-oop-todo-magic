@@ -10,6 +10,6 @@ export default class Todo {
   }
 
   markDone() {
-    this.complete = true;
+    this.complete = !this.complete;
   }
 }

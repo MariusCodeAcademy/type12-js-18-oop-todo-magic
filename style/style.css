@@ -1,1 +1,9 @@
 @import 'reset.css';
+
+.done-todo {
+  color: gray;
+  text-decoration: line-through;
+}
+.done-todo::after {
+  content: ' complete';
+}

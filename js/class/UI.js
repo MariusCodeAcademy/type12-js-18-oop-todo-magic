@@ -20,6 +20,7 @@ export default class UI {
     const liEl = document.createElement('li');
     // pridedam <li data-id=5 >
     liEl.dataset.id = todo.id;
+    liEl.className = todo.complete ? 'done-todo' : '';
     liEl.textContent = `${todo.title} created at ${todo.timeStamp} `;
     const buttonEl = document.createElement('button');
     buttonEl.textContent = 'delete';
